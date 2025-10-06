@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fayette Restaurant</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.restroworks.com/blog/wp-content/uploads/2024/12/restaurant-seating.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+ header.navbar {
+    background-color: beige;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end; /* push nav links to the right */
+    align-items: center;
+}
+
+header.navbar .logo {
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    color: brown;
+    font-family: cursive;
+}
+
+
+        header.navbar nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: brown;
+            font-weight: bold;
+        }
+
+        header.navbar nav a.active {
+            text-decoration: underline;
+        }
+
+        .menu-container {
+            background-color: rgba(245,245,220,0.9); 
+            padding: 25px; 
+            border-radius: 15px; 
+            max-width: 600px; 
+            margin: 30px auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1, h4 {
+            text-align: center;
+            color: brown;
+            font-family: Consolas;
+            margin: 10px 0;
+        }
+
+        .footer, footer {
+            text-align: center;
+            background-color: beige;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            font-family: cursive;
+            color: brown;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo {
+    margin: 0 auto; /* centers in header */
+    text-align: center;
+     transform: translateX(-50%); 
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar/Header -->
+  <header class="navbar">
+    <div class="logo">Fayette</div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+    <!-- Owner and Menu Info -->
+     <center>
+    <div class="menu-container">
+        <h1 id="ownerName"></h1>
+        <p id="storeHours"></p>
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/e6/06/bb/caption.jpg?w=900&h=500&s=1" style="width:100%; max-width:500px; height:auto; border-radius:10px;">
+
+        <h3 style="font-family: Consolas; color: brown;">Cafe Menu Price</h3>
+        <div id="menuContainer"></div> <!-- Python will generate menu here -->
+    </div></center>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2 style="font-family: Consolas; color: brown;">Opening Hours</h2>
+        <p>9:00 AM to 9:00 PM</p>
+    </div>
+  <footer>
+        <p style="font-family: Consolas; color: brown;">Submitted by Annika Francisco - Established 2025</p>
+    </footer>
+
+    <!-- Link Python file -->
+    <py-script src="./main.py"></py-script>
+</body>
+</html>

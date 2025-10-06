@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fayette | Order Now</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+     <style> body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.restroworks.com/blog/wp-content/uploads/2024/12/restaurant-seating.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+header.navbar {
+    background-color: beige;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end; /* push nav links to the right */
+    align-items: center;
+}
+
+header.navbar .logo {
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    color: brown;
+    font-family: cursive;
+}
+
+
+header.navbar nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
+        header.navbar nav a.active {
+            text-decoration: underline;
+        }
+        .form-container {
+            background-color: rgba(245,245,220,0.9); 
+            padding: 25px; 
+            border-radius: 15px; 
+            max-width: 600px; 
+            margin: 30px auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        h1, h4 {
+            background-color: beige;
+            color: brown;
+            font-family: Consolas;
+            text-align: center;
+            padding: 10px;
+        }
+        label {
+            font-weight: bold;
+            font-family: cursive;
+            color: brown;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%; 
+            padding: 5px; 
+            margin-top: 5px; 
+            margin-bottom: 10px; 
+        }
+        .summary { 
+            margin-top: 20px; 
+            padding: 10px; 
+            background-color: #fff; 
+            border: 1px solid #ccc; 
+            white-space: pre-wrap; 
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            color: brown;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer, footer {
+            text-align: center;
+            background-color: beige;
+            padding: 10px;
+            margin-top: 20px;
+        }
+                .logo {
+    margin: 0 auto; /* centers in header */
+    text-align: center;
+     transform: translateX(-50%); 
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">  
+     <h1 class="logo" id="storeName">Fayette</h1>
+       
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="order.html" class="active">Order Now</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        
+        </nav>
+    </header>
+
+    <!-- Order Form -->
+    <h1>Place Your Order</h1>
+    <h4>Delicious Food, Just For You</h4>
+
+    
+
+    <div class="form-container">
+        <h3>Customer Details</h3>
+        <label for="cust_name">Name:</label>
+        <input type="text" id="cust_name" placeholder="Enter your name">
+
+        <label for="cust_address">Address:</label>
+        <input type="text" id="cust_address" placeholder="Enter your address">
+
+        <label for="cust_contact">Contact Number:</label>
+        <input type="number" id="cust_contact" placeholder="Enter your contact number">
+
+        <br><br>
+        <h3>Menu Selection</h3>
+        <label>Select Food Items:</label><br>
+        <input type="checkbox" id="item_sushi"> Sushi - ₱50<br>
+        <input type="checkbox" id="item_salmon"> Salmon - ₱150<br>
+        <input type="checkbox" id="item_curry"> Curry - ₱30<br>
+        <input type="checkbox" id="item_drink"> Drink - ₱20<br>
+
+        <br>
+        <button id="orderBtn" py-click="compute_order" style="color: brown;">Place Order</button>
+
+        <div class="summary" id="summary"></div>
+        <a href="index.html" class="btn-back">← Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2 style="font-family: Consolas; color: brown;">Opening Hours</h2>
+        <p>9:00 AM to 9:00 PM</p>
+    </div>
+    <footer>
+        <p style="font-family: Consolas; color: brown;">Submitted by Annika Francisco - Established 2025</p>
+    </footer>
+
+    <!-- Link Python -->
+    <py-script src="./main.py"></py-script>
+</body>
+</html>
